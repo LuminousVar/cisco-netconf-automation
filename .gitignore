@@ -1,4 +1,4 @@
 .env
-virtualenv/
+virtual_env/
 
 netconf_testing.py
