@@ -14,7 +14,7 @@ configuration = """
                     <prefix>192.168.160.0</prefix>
                     <mask>255.255.255.0</mask>
                     <fwd-list>
-                        <fwd>192.168.1.1</fwd>
+                        <fwd>192.168.1.2</fwd>
                     </fwd-list>
                 </ip-route-interface-forwarding-list>
             </route>
@@ -22,6 +22,7 @@ configuration = """
     </native>
 </config>
 """
+
 
 try:
     print("Configuring IP Route.......")
