@@ -26,3 +26,8 @@ def get_router_connection():
         allow_agent=False,
         look_for_keys=False
     )
+
+
+def print_connection_info():
+    print(f"Connecting to router at {host}:{port}")
+    print(f"Username: {username}\n\n")

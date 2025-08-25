@@ -1,7 +1,7 @@
-from config.router_config import get_router_connection, host, port, username
+from config.router_config import get_router_connection, print_connection_info, host, port, username
 
-print(f"Connecting to {host}:{port}")
-print(f"Username: {username}\n\n")
+# * ------------ Connection Message ------------
+print_connection_info()
 
 try:
     Router = get_router_connection()

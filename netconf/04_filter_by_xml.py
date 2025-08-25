@@ -1,8 +1,7 @@
-from config.router_config import get_router_connection, host, port, username
+from config.router_config import get_router_connection, print_connection_info, host, port, username
 
 # * --------- Connection Message ---------
-print(f"Connecting to {host}:{port}")
-print(f"Username: {username}\n\n")
+print_connection_info()
 
 try:
     print("Filter By XML..............")

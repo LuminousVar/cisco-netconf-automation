@@ -3,13 +3,20 @@ from config.router_config import get_router_connection, print_connection_info, h
 # * ------------ Connection Message ------------
 print_connection_info()
 
-try:
-    print("NETCONF Connection.........")
-    Router = get_router_connection()
-    print("Connection Success")
+configuration = """
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <hostname>testing-coba-coba123</hostname>
+    </native>
+</config>
+"""
 
-    for capability in Router.server_capabilities:
-        print(f" -- {capability}")
+try:
+    print("Configuring Hostname.........")
+    Router = get_router_connection()
+
+    config = Router.edit_config(config=configuration, target="running")
+    print(config)
 
     Router.close_session()
 
